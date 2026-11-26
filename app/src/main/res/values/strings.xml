@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">رئیس پلیس</string>
+    <string name="splash_subtitle">مدیریت هوشمند امنیت شهر</string>
+    <string name="splash_start_button">ورود به مرکز فرماندهی</string>
+    <string name="nav_home">فرماندهی</string>
+    <string name="nav_missions">مأموریت‌ها</string>
+    <string name="nav_officers">نیروها</string>
+    <string name="nav_garage">گاراژ</string>
+    <string name="nav_station">کلانتری</string>
+    <string name="nav_stats">آمار</string>
+    <string name="currency_unit">سکه</string>
+    <string name="level_label">سطح</string>
+    <string name="active_missions_label">مأموریت فعال</string>
+    <string name="officers_label">مأموران</string>
+    <string name="station_status_label">وضعیت کلانتری</string>
+    <string name="view_missions_action">مشاهده مأموریت‌ها</string>
+    <string name="scan_city_action">دریافت گزارش جدید</string>
+    <string name="dispatch_action">اعزام نیرو</string>
+    <string name="claim_result_action">بررسی نتیجه</string>
+    <string name="hire_action">استخدام</string>
+    <string name="upgrade_action">ارتقا</string>
+    <string name="buy_action">خرید خودرو</string>
+    <string name="confirm_reset_title">شروع مجدد بازی</string>
+    <string name="confirm_reset_body">آیا مطمئن هستید که می‌خواهید تمام پیشرفت‌های کلانتری، نیروها و خودروها را پاک کرده و از سطح ۱ شروع کنید؟</string>
+    <string name="confirm_yes">بله، شروع مجدد</string>
+    <string name="confirm_cancel">انصراف</string>
+</resources>

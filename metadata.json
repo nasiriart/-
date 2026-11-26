@@ -1,0 +1,6 @@
+{
+  "name": "رئیس پلیس",
+  "description": "بازی مدیریتی آفلاین رئیس پلیس برای مدیریت کلانتری، اعزام نیرو، خرید خودرو و برقراری امنیت شهر",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
