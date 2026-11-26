@@ -23,12 +23,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # Permanent upload key (embedded base64 PKCS12 keystore).
-      # IMPORTANT: always the same key -> future Cafe Bazaar updates stay compatible.
-      KEYSTORE_B64: >-
-        MIIRFAIBAzCCEL4GCSqGSIb3DQEHAaCCEK8EghCrMIIQpzCCCi4GCSqGSIb3DQEHAaCCCh8EggobMIIKFzCCChMGCyqGSIb3DQEMCgECoIIJwDCCCbwwZgYJKoZIhvcNAQUNMFkwOAYJKoZIhvcNAQUMMCsEFF3/2QXPddiIqWdDIr8Al8Ui+dmOAgInEAIBIDAMBggqhkiG9w0CCQUAMB0GCWCGSAFlAwQBKgQQKvPTxteErhvvxRLr2WeHxgSCCVBWK3ndPO0mhlHmL+xo8GZqeV2pi0EZmLcNEUzDlmFUCTlGIqt1r0QkWMPSDS7RW8JwPuQS3g4LzStjL5nhcy2IvobiV+mK9k1U9paEn9CplxQrptyp8ESqA+M5v4oKVnO0a0ABq/dgluCFOhFA0FsSx/JJ8ixVJK9GfwAmqthoXzLgm1w7HnWnx+Jqg4YRjR/J+oH+8r8f8wk7C0KE5asoZCIgkXjih6KrjRCUZ72CSZOBHOy3biUgpPZu5Np4ofAB5Ln38vQ1NtoDDDKf1cWbXmDers3MP+XuCBhMes7+iSc8zjisIxZBe7RBvo4tgX/Jv+ghzeeKaqgQ4jwTutdE7Ow+WNM33PtEwLmdyDLMMBW39lLIYsq/7gqPTDLc1UkzRNBYEXJfXRc3nN9AWVqr1bVl2K/xhQgVBDfvOkoq9dNafJ80azhNBtrTKMuNwqWMQNAge4W5LK7qwCkvHaNokEtvc3QFHl2upYsLqQaE5XJ59ukP5kBzFFXuz7bBy/FDRFw+JoED30sn/p9RQ+tKuPp4Nu2RIb3v20iOs3zIp3xFwBS5A9HCnXLkSvSeGIhKfAbi81/u920isicg8BPtN1uuvd70W4/TI9Bof2uxzIWKze58njvNWwPn8B9EIbzzpsc4H5ZXYp7OvPLQeNZZlpNf4e9rFT+X2kgBq/yz9xMAyIJwRfCWtSoPB4i7U/gN1S9DQhFDsQ00ruODKXepB31GZ9XdPTXo1mVWqpsF9MMmDQERideI5lTSnk0KwTMC9I6bOyFWxtnl3Gidl/yBwVeX9JgscXYMgSKYm+9pCIB9tHwaV8FOjEFAIQ+UzxE4P8yvoI3+AshHEf5SRxjxFy40lSl8Xn37fgzhttpP4fpXc5mzlWcItv30ATeUiaOCBqVyDH7f0SV12Mkccy6ltspf++oKXFRAEGYGFAL+YwlBx0N566TmCib0dwYX6/HJHylDCuCFNaOHGfSmiImE+/wi7KjdmgVv/7UaRflrcskMSVgsBk9dlbxpEiM7C12dZK9OjyyrnAuAKxz1Two4T10D2orspcaSr7q6zLlikJ7nkqUrs4CNlh4rTS2Wzqtf5j7fViBhXdnvVHr2MjMiA3sv/xak9/om78UtDa/WALjnX8t0CXrpDDB18zFpb+snjuHEbvHwzeM5yYTXtUfVsMVlUHHmuXWtrxbzeuPM0+cD9dR15Z0d0kSnFTu/yRL2D8LMpZByVahRXjW9gjMeQzkEbAqZ7DzqJsWH0lDRx3MPx7GqxO7G9XzX/MzBPzLCP+s4btfAElLmPh79AnycZtdW2P7X2w+uUwNafEI6H6nxspCSRkF8Oe107VeFGcRPgbmxcnKdnnH/mfyEJM578VqSvHgPtcPVaNPskAxmu35TOL2cgXf9Okbd6Hk5TWp5/ZUggNxkHEeKiqR7mf8JqhO/AFBpdE/VCwaEKksUsRURnidv0P+ALN/9zDAW9rSOXe8dUVb7q/UTh9YyhximvVmknLzLsi3KlwCB7ZmhRodv5tO9SWB3W6IkYYK+OE6sdNOiM8gBRHUAJukL19FOLQzWe0/EQ9YB5huntQSxQxTY5Cb9anVOz3B9WW52eoCJ5hM6f1nuYpQRCsYn9BXxiExNQeefEnatJ0/0IbXYwc+wwtZmZJcjzTClVRmnmMKdgxey4oJ8pWvCOx3ZHzLTZBy4xoHaz+xg0oVmk+/z2W4z/BhGam+UzRYnfh2k8rIVlGXmbymtdjSBg9xBZKWMpD3tgwH5S8IuSrogziVnAtXyJzSMV0qns0MhyBkLkZn6NcKr3AXy62NarCmGQfkeg+gbWml+Sfx/oj+d2eRxgtZTLagEtrZ4NfGmawXshYpmce8bs1qAq/imTjjTCbx2GDY3DE9R/dn6vlZqazmnpmGRwMFwrQLNrpj0Dnc0cnIToOw0RvZwPZNA+moOkEqgNtJPk7rQ3Q8OtW0nveg32jaQDLzkfOd3M+EfgO/P6xpQWPkgwhxYTnpeUhHt1LEzvO6uadOwAAJ/xKkIa5ZZ8sJvt10mBXf0lmX29p1NPo3hg31wlAsw3CcyfIczSNDr7b+YcnkDewncdhZIlyNgTK7uqEhZi6WoQAhTpn3S1RN6J/b0hqde41mMdAhTqr5VCFKp30cR6j8s8zLSHKveoa2jJzF4VvjHWSSf0LCtpR09HnEq8SVoZZZpSHUKIq96+qxNaaFtZ5KilkcSo1nZiegjn+SS4kP7G4NjvY6BYKKn+p2NRwFdBn86p0jbgcFFsFI71YzaeHCJSpQveNl9TnGVqEWPjsXZ2jxSyByqoct03418Hh3AnaiErSIzpFfjCTpWJ7p8HHMwXN55QpfdIKNFUUzkDl00mBM/WnFK2B3u2kkdC5Dmchf5pu1YHME49QnDVoZEcMq5fn9VAMwtg7+f53o3WgB+QPv3z3az75Z8+CrzNLAneovkT9r9ExB2vTVwE7CWo+CTt3IUDHx0X/kyyBMkSW3zTDh27hZvrFZyMZgN8gqTqyyVGEbNLTGHN/hG86HbeaPjJUN3Z6mylaEeQsekh6q3ymlaeFD745gFk/nzDk5xZLwVL3DYWLAxAWekMoENFhjD/pW7eDOMhHAzzHdyHBUAhI3lHibxeIjDWiEhkqcdVU2qBRQfgle464sUwL8ANP9b4vgS5ZLnO1GP9NlK0aiTYgSSgd3jrSQFi+BvdqkBGCHR6WWVpMDFnYSoWJYR5ykb4AHF6khdmT6h7YUwo8sF2/h6UFVxtZBeeRc77sptWebFDwYyqbLHzOe4ZOlYeERBXbqLoKvOIZ/174bpk107xp3X4Q2fddF6kiDofVGWV7FIlWQOoDJgAOCNp41EP5O1cYUXO+xwBWwSD18JXhHw9emj/KWKtKKgdar9JWdh7VtYkRZkRM3D/tNV8rRDAr54IGXzAaDuNTeq2IBQzMM+kDgnSyDQF8FlsC/9XnIBcXekRnErEKTVe3nl41pVWwJs+w880/0r7s+3g0ZQl699dYVyRW+4/uD03nqklWkOTtFav+plkhemxsSI+9U/CQjgTAZ+cuGoPeMQOmmA9dYoiHKZKmNycGBCERmxev8tlrM86HIIETCZgb8lKwBTBMJHbofLFqjbfdk8z1wD+4mXbGTVuNNgpJ7kfJeb0pnU1x59RMaBjyL6lq3gwquFs8+GFTBn1YAIfDFAMBsGCSqGSIb3DQEJFDEOHgwAdQBwAGwAbwBhAGQwIQYJKoZIhvcNAQkVMRQEElRpbWUgMTc5NTcwODM3MTEzOTCCBnEGCSqGSIb3DQEHBqCCBmIwggZeAgEAMIIGVwYJKoZIhvcNAQcBMGYGCSqGSIb3DQEFDTBZMDgGCSqGSIb3DQEFDDArBBQ+uceZBFHCtajw3QKAEHzduh464wICJxACASAwDAYIKoZIhvcNAgkFADAdBglghkgBZQMEASoEEIl81fURkNbDeRV6WI5E4ZqAggXgBaMoF3uk4u+7lgXUOC1xDlCmc3OWjjJG1zfe6SV4GLZ3MCTq4z+zChApyeFzAGFCJ7Comb9Qy1vsomw9g+YUPXaNiodELhlzaqC89N4XmIu3VjuQV74t0ZfAoa7bU17LYHlyxIy/ZOhg9F5mpgbxcfrVqrs6RmeqM1VdVmOcUShhNJiS4/RyGTPep14sI7DqfWKruhKckuI9zRsocn9T9uuwWZUAabynEIXgQzJJ/WhSK763N7BqL8F1XfRaZjoZf/cwGwfxD+/UVP3uleOmLu0rxTy5wQYBR4zwmC5pmmW5uhq6f0d0LrUnN4Gbdk+1x64gSSL4aIiSAs//W4gwrkc/k/BRn7D9hPbpXTBmXvzGh/sxkVwHZh5iiti3bqEqLqIN/boRkU97DsgIYVJiEZjQCFQJkGAQU7BoREDvxajtEhikmo09fR1Rgxij+1YUIlB1V8kpXqI//ggR4ZhZkQQSFatXzehE4lpJqePTKuX3Q7rax/NffI905wFkQezRnJvAMz+vm9fWjm6gVK6uYRhb1OgYgwDv9T0w0YC4EMl4HXTdnNvXgChLWh4NbpY/ZxTWo9geivwYyClDSg9Epo0o/m86Oli3+uS4+bOWwBVdW/2oPnh/Q7G5oOnZ32DlBV776TDe2O5RqTTaH6T9p2k3lf0P4z23pmSlMDKhdTV+WdhGBnDPnd6DXT7JW3GqmvuaNvNLlyMQA19ZVVldu8Od8HH3t1CFm+suvfRMVWUy+NvP3/PMeEEbCG8jFKjOomfqGT957RRwLUxg+lLsg4Z0fte6pQfj/IwA21P/XGA43T3vgdnAln8/otv0WqpczFdcZ+bJP/Iv2Y3fMZ4GAU6VwKTAVxEgSdY7qgjgBdf0i1Ex743P/GS13CVreUaynRtOE+TrCXQwDVrB1vk3AF9EAxuuNyBrKT020p5KCPDSL/IvstQuV8D3TSa4jhf6V/WdYFbcsejhnGkwi0kSFm1ce/VmmDXPwSuLfTco82y2C0jZ+42PVjFGQ9d/qWTmey/moQv1fSafqTbz6iURYzbMI+mmojf59YZDKNW4td6WKcoIXubgbQILFPTklqd/X2R2zS3DnYs9/w/BoubpgC6+2pvmpC8FPOPNKWBu1kjgA9pMI09E5CrIcNATk+iChDQMoPMpydeN35Wx3Y+1UBnMEqROOYqxFNyoYjwUrDSRodM1MTqTeg9Fgwv80KIdrJB/Dmfo9AsU4uK6/qwK3mNqf0dcG0/aR/KoyjMQOBPiFFqRgcZ6J7zctcO5XhbI0HsaSJpVYFK3rQCQW2No0UjyFiTYm8IWOx4/Ye1OJoHE5kb+NuycCagsNCv63tfx/ii2g/FWq/9hH4w+3GGJg52R0oypoxrQTbRqTqGdr7lkis7VRe6QbhvtilYf5L6innkwZHLvxpbnsiNNsTLuR615DnPLvPiCrRK8HAqjMLPAiEkezEW0UaqTxEuvVj0aap9n08XeaWUdWR7HSsWNKg9yOnkP/+8L9g0t+JlJCQTkDNjK5DE8VNjkE9nZxvbRPSiIylqgC5YedoOPYFAL/eUa+SDJBYPcZLzcGL95eyJprUbI3FIR3X0xZ7JhOJM7DX349VQZH3qDLBYF8EUuoR0nqI7D2LwMM5GPEfEkPhpSt41FaYU8UPXKzTJZAM62w/vC+HTOLK4qUnRl4ttvsl5zxODJCmWd/N3NSt4cpAPXsvq9F2ypSwCLLSgfP5+j4H2/5IVG9gQMzGQWenRZeEQ8JzvMIHxNaXcfilVa4zgDbska0YD7HEybSKXsFsT9coSzh6MTla/FL5s/Ix6t2vkCTd+x5tWCj1lLnp+ctSjg65iDZ8auBkUudEXX330hTyaqB8Puql4iF070U0jZRdCOTqlGY2xCSyO71y42ZSjg4vOJDwUnnCs1NVseXhqDB5qnRaUbMqgaBqdpu2ra/uDrm75e+Z11q2u+DeoK10Ur/5W4Dj/tVLtejdVSpvA5RJlMQ9NgI8EBQhy2JmqMzTBNMDEwDQYJYIZIAWUDBAIBBQAEIJbvjvrrGIAIJ511qblHyZKRn+D5Bh7J6dZZBUFaupmCBBSNRWBb82iYIFSvL9Ldc2LRBWnmwwICJxA=
-      STORE_PASSWORD: '5bb03e91858be07e3d6a27d8cb22b53a32745a66'
-      KEY_PASSWORD: '5bb03e91858be07e3d6a27d8cb22b53a32745a66'
+      # All signing material comes from repository Secrets (Settings -> Secrets and variables -> Actions):
+      #   KEYSTORE_B64    = base64 of the PKCS12 keystore (content of my-upload-key.jks.b64)
+      #   STORE_PASSWORD  = keystore store password
+      #   KEY_PASSWORD    = key password
+      KEYSTORE_B64: ${{ secrets.KEYSTORE_B64 }}
+      STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
+      KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
     steps:
       - uses: actions/checkout@v4
 
@@ -50,9 +51,13 @@ jobs:
             echo "sdkmanager not found; relying on AGP auto-install"
           fi
 
-      - name: Restore permanent signing key
+      - name: Restore permanent signing key from Secrets
         run: |
           set -euo pipefail
+          if [ -z "${KEYSTORE_B64:-}" ] || [ -z "${STORE_PASSWORD:-}" ] || [ -z "${KEY_PASSWORD:-}" ]; then
+            echo "::error::Missing secrets. Add KEYSTORE_B64, STORE_PASSWORD and KEY_PASSWORD in Settings -> Secrets and variables -> Actions."
+            exit 1
+          fi
           printf '%s' "$KEYSTORE_B64" | tr -d '[:space:]' | base64 -d > "$GITHUB_WORKSPACE/my-upload-key.jks"
           keytool -list -keystore "$GITHUB_WORKSPACE/my-upload-key.jks" -storepass "$STORE_PASSWORD" | head -5
 
@@ -86,15 +91,16 @@ jobs:
           ============================================================
           Keystore file : upload-keystore.jks (PKCS12)
           Alias         : upload
-          Store password: 5bb03e91858be07e3d6a27d8cb22b53a32745a66
-          Key password  : 5bb03e91858be07e3d6a27d8cb22b53a32745a66
+          Passwords     : stored in repository Secrets (STORE_PASSWORD / KEY_PASSWORD)
+                          and in your local secure copy of SIGNING-INFO.txt.
+                          (Not printed here because this repository is public.)
           Algorithm     : RSA 4096, valid 10000 days (until ~2054)
 
           IMPORTANT
-          - Keep this file and the passwords safe. Every future update
-            on Cafe Bazaar must be signed with THIS EXACT key.
-          - Anyone holding this file + the passwords can publish fake
-            updates with your signature. Keep the repository private.
+          - Keep your local SIGNING-INFO.txt and the passwords safe.
+            Every future update on Cafe Bazaar must be signed with THIS EXACT key.
+          - upload-keystore.jks here is safe to download (it is useless
+            without the passwords, which are not in this repository).
           ============================================================
           EOF
           ls -la
@@ -163,7 +169,7 @@ jobs:
           set -uo pipefail
           gh release create v1.0 --target main \
             --title "رئیس پلیس v1.0 — APK امضاشده" \
-            --notes "APK امضاشده برای انتشار در کافه بازار. کلید امضا و رمزها داخل SIGNING-INFO.txt" || true
+            --notes "APK امضاشده برای انتشار در کافه بازار. اطلاعات کلید امضا در SIGNING-INFO.txt" || true
           gh release upload v1.0 PoliceChief-v1.0-release.apk upload-keystore.jks SIGNING-INFO.txt --clobber
 
       - name: Push failure log for debugging
